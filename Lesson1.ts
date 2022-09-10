@@ -31,7 +31,7 @@ let variable17: Array<number> = [1, 2, 3, 4, 5];
 let variable18: Array<boolean> = [true, false, true];
 
 // Typescript inoltre fornisce altri Tipi di variabili
-let variable19: any = "Hello World"; // any può essere qualsiasi cosa
+let variable19: any = "Hello World"; // any può essere qualsiasi cosa, disabilita il type checking.
 let variable20: void = undefined; // void non ha valore
 let variable21: null = null; // null non ha valore
 let variable22: undefined = undefined; // undefined non ha valore
@@ -57,7 +57,7 @@ var users: [number, string, boolean, string][] = [[1, "Steve", true, "admin"], [
 // Possiamo accedere agli elementi di un Tuple con la notazione [nomeVariabile][indice]
 
 // Qual è la differenza tra un Tuple e un Array?
-ù
+
 /*
 * Un Tuple è una variabile composta da un numero di elementi, mentre un Array è una variabile composta da un numero di elementi in cui ogni elemento dell'Array è una variabile.
 * Tipicamente, il tuple è un array con larghezza fissa e tipi di dato definiti. Si usa infatti il tuple per un array statico e ben definito.
@@ -69,7 +69,7 @@ const primaryColors: [string, string, string] = ['#ff0000', '#00ff00', '#0000ff'
 console.log(primaryColors);
 
 //Questa sotto invece ritornerà un errore
-const primaryColors2: [string, string] = ['#ff0000', '#00ff00', '#0000ff'];
+// const primaryColors2: [string, string] = ['#ff0000', '#00ff00', '#0000ff']; // Errore -- Togliere il commento per verificare
 // throws an error because there's an extra string
 
 // Usando invece un array:
@@ -83,3 +83,17 @@ const primaryColors4: [string, number] = ['#ff0000', 100];
 // Perchè abbiamo bisogno dei tuple: Per conservare dati in un array che non cambi, come ad esempio le informazioni personali di un dipendente.
 
 /***** FINE TUPLE *****/
+
+/***** ENUM *****/
+// Enum in Typescript è una variabile composta da un numero di elementi, ogni elemento dell'Enum è una variabile con un valore numerico associato.
+// Ad esempio:
+enum Color {
+    Red,
+    Green,
+    Blue
+}
+// Ti permette quindi di dare ad un set di valori un nome
+
+/***** FINE ENUM *****/
+
+
